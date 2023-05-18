@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
 use App\Models\Post;
 
 class PostSeeder extends Seeder
@@ -18,6 +19,7 @@ class PostSeeder extends Seeder
             'id_user' => 1,
             'sampul' => 'gambar1.jpg',
             'post_title' => 'Gojo VS Sukuna : Pertarungan anti klimaks?',
+            'slug' => 'gojo-vs-sukuna-pertarungan-anti-klimaks',
             'post_subtitle' => 'Final battle yang telah ditunggu sama banyak orang selama
                                 ini untuk membuktikan siapa yang terkuat antara Gojo atau Sukuna?',
             'konten' => '24 Desember, pertarungan antara Penyihir terkuat saat ini Satoru Gojo dengan skin Toji
@@ -29,6 +31,9 @@ class PostSeeder extends Seeder
                         pengennya Sukuna skin Yuji tapi skin Megumi tidak buruk juga. Ayo kalian pasang siapa nih, Gojo apa Sukuna?
 
                         Buruan pasang di situs slot Meimei.',
+
         ]);
+        $slug = Str::slug($posts->post_title);
+        $posts->slug = $slug;
     }
 }

@@ -6,7 +6,7 @@
         <div class="col-lg-8 col-md-10 mx-auto">
             @foreach($posts as $row)
                 <div class="post-preview">
-                    <a href="{{ route('artikel.show', $row->id) }}">
+                    <a href="{{ route('artikel.show', $row->slug) }}">
                         <h2 class="post-title">
                             {{ $row->post_title }}
                         </h2>

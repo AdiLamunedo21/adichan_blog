@@ -35,6 +35,7 @@ class PostController extends Controller
 
         $post = new Post;
         $post->post_title = $validatedData['post_title'];
+        $post->slug = strtolower(str_replace(' ','-', $request->post_title));
         $post->post_subtitle = $validatedData['post_subtitle'];
         $post->konten = $validatedData['konten'];
         $post->sampul = $imageName;
@@ -66,11 +67,12 @@ class PostController extends Controller
             'post_title' => 'required|max:255',
             'post_subtitle' => 'required|max:255',
             'konten' => 'required',
-            'sampul' => 'nullable|image|max:2048'
+            'sampul' => 'nullable|image|max:2048',
         ]);
 
         $post = Post::find($id);
         $post->post_title = $request->post_title;
+        $post->slug = strtolower(str_replace(' ','-', $request->post_title));
         $post->post_subtitle = $request->post_subtitle;
         $post->konten = $request->konten;
 

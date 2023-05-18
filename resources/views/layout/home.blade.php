@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Clean Blog - Start Bootstrap Theme</title>
+    <title>Hanicode | Blog </title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{asset('home/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -35,8 +35,8 @@
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
             <div class="site-heading">
-                <h1>UpNime</h1>
-                <span class="subheading">Bahasan Terbaru Tentang Anime & Manga</span>
+                <h1>Hanicode</h1>
+                <span class="subheading">Bahasan Terbaru Tentang Dunia Coding</span>
             </div>
             </div>
         </div>

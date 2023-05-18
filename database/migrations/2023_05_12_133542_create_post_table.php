@@ -17,6 +17,7 @@ class CreatePostTable extends Migration
             $table->id();
             $table->string('sampul');
             $table->string('post_title');
+            $table->string('slug');
             $table->string('post_subtitle');
             $table->text('konten');
             $table->timestamps();
